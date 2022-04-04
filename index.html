@@ -1,40 +1,68 @@
-<!doctype html>
-<html>
-<head>
-   <meta charset = "utf-8" />
-   <title>Gamedev Canvas Workshop</title>
-   <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
-   </style>
-</head>
-<body>
+<p><a href="https://opensource.org/licenses/"><img src="https://img.shields.io/badge/License-GPL%20v3-yellow.svg" alt="GPLv3 License"></a>
+<a href=""><img src="https://img.shields.io/discord/945836676272517201?label=2%20Identical%20Rocks" alt="Discord"></a></p>
+<h1 id="gold-language">Gold-Language</h1>
+<p>The <strong>Gold</strong> Programming Language is an Programming Language designed to be really easy to
+edit and overall just being an very Permeable coding Language.</p>
+<h2 id="setup">Setup</h2>
+<p>The <strong>Gold</strong> Language uses the Following Packages:</p>
+<pre><code class="lang-javascript">npm <span class="hljs-selector-tag">i</span> prompt
+</code></pre>
+<pre><code class="lang-javascript">npm <span class="hljs-selector-tag">i</span> open
+</code></pre>
+<pre><code class="lang-javascript">npm <span class="hljs-selector-tag">i</span> colors
+</code></pre>
+<p>Check the packages out here:</p>
+<p><a href="https://www.npmjs.com/package/prompt">prompt</a><br><a href="https://www.npmjs.com/package/open">open</a><br><a href="https://www.npmjs.com/package/colors">colors</a>   </p>
+<h1 id="commands-booting">Commands/Booting</h1>
+<p>There are several ways that you can run your <strong>Gold</strong> file:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">node</span> <span class="hljs-title">.</span>
+</code></pre>
+<pre><code class="lang-javascript">npm <span class="hljs-keyword">run</span><span class="bash"> index</span>
+</code></pre>
+<p><strong>Or you can just use the .bat files:</strong></p>
+<ul>
+<li><em>shell.bat</em>: opens the Gold-Shell.</li>
+<li><em>setup.bat</em>: creates an blank directory with some setup files.</li>
+<li><em>index.bat</em>: Boot directly into the Index.js File.</li>
+<li><em>save.bat</em>: Save current program into the editor.</li>
+<li><em>install.bat</em>: Install all packages required in the current Version.</li>
+<li><em>run.bat</em>: Run currently saved gold file.</li>
+</ul>
+<h1 id="programming">Programming</h1>
+<p><strong>Gold</strong> is ran inside of the <strong>.gold</strong> file extension, so your directory would look something like this:   </p>
+<p><em>/.bat</em><br><em>/Blank-Project</em><br><em>/info</em><br><em>/modules</em><br><em>/myProjectSettings</em><br><em>/node_modules</em><br><em>package-lock.json</em><br><em>package.json</em><br><em>program.gold</em><br><em>README.md</em><br><em>run.bat</em><br><em>shell.bat</em>  </p>
+<p>The <strong>.gold</strong> file is your program.   </p>
+<p>Your <strong>Gold</strong> Program is interpreted using the interpreter you have, or the default one if you don&#39;t have a one.</p>
+<p>An Basic <strong>Gold</strong> Program would look something like this:</p>
+<pre><code class="lang-javascript">var myGoldProgram = {
+<span class="hljs-symbol">    name:</span> <span class="hljs-string">"Example Gold Program"</span>,
+<span class="hljs-symbol">    des:</span> <span class="hljs-string">"An Example Gold Program for the README file."</span>,
+<span class="hljs-symbol">    ex:</span> [
+        {
+<span class="hljs-symbol">            fun:</span> <span class="hljs-string">"log"</span>,
+<span class="hljs-symbol">            val1:</span> <span class="hljs-string">"Hello World!"</span>
+        }
+    ]
+};
 
-<canvas id = "myCanvas" width = "480" height = "320"></canvas>
-
-<script>
-   
-   var canvas = document.getElementById("myCanvas");
-   var ctx = canvas.getContext("2d");
-   
-   var x = canvas.width/2;
-   var y = canvas.height-30;
-   
-   var dx = 2;
-   var dy = -2;
-   
-   function draw() {
-      ctx.,beginPath();
-      ctx.arc(x, y, 10, 0, Math.PI*2);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
-      x += dx;
-      y += dy;
-   }
-   setInterval(draw, 10);
-   
-</script>
-
-</body>
-</html>
+<span class="hljs-class">export </span>{ myGoldProgram };
+</code></pre>
+<h1 id="advanced-programming">Advanced Programming</h1>
+<p>Think you got the hang of the <strong>Gold</strong> language? There are still many different things that you can do with the <strong>Gold</strong> language. Check out some tutorials inside of the wiki, or follow the basic Coding guide Below:</p>
+<pre><code class="lang-javascript">
+fun // add, sub, mul, div, <span class="hljs-keyword">if</span>, <span class="hljs-built_in">log</span>, <span class="hljs-built_in">var</span>, logVar
+saveToVar // <span class="hljs-literal">true</span>/<span class="hljs-literal">false</span>
+val1 // Your First Value, used <span class="hljs-keyword">for</span> logging things <span class="hljs-keyword">and</span> math equations.
+val2 // Second Value <span class="hljs-keyword">for</span> math equations.
+slot // Variable slot <span class="hljs-keyword">for</span> <span class="hljs-built_in">saving</span>. Possibilites are <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-keyword">or</span> <span class="hljs-number">2</span>.
+type // =, &gt;, &lt;, ! 
+logvaluetrue // What to <span class="hljs-built_in">log</span> <span class="hljs-keyword">if</span> your <span class="hljs-keyword">if</span> statement <span class="hljs-built_in">is</span> <span class="hljs-literal">true</span>
+logvaluefalse // What to <span class="hljs-built_in">log</span> <span class="hljs-keyword">if</span> your <span class="hljs-keyword">if</span> statement <span class="hljs-built_in">is</span> <span class="hljs-literal">false</span>
+</code></pre>
+<h1 id="contribution">Contribution</h1>
+<p>Wanting to Contribute to <strong>Gold</strong>? Check out the <em>contributing.md</em> inside of the <em>/info</em> folder to learn how you can contribute to the <strong>Gold</strong> language.</p>
+<h1 id="used-by">Used By</h1>
+<p>This project is used in the following projects:</p>
+<ul>
+<li><a href="https://github.com/Shining-Gold-Studios/Gold-Language">Gold</a></li>
+</ul>
