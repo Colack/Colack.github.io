@@ -25,38 +25,49 @@ edit and overall just being an very Permeable coding Language.</p>
 <li><em>index.bat</em>: Boot directly into the Index.js File.</li>
 <li><em>save.bat</em>: Save current program into the editor.</li>
 <li><em>install.bat</em>: Install all packages required in the current Version.</li>
-<li><em>run.bat</em>: Run currently saved gold file.</li>
+<li><em>regInt.bat</em>: Run installed gold program using the Regular Interpreter.</li>
+<li><em>engInt.bat</em>: Run installed gold program using the English Interpreter.</li>
 </ul>
 <h1 id="programming">Programming</h1>
 <p><strong>Gold</strong> is ran inside of the <strong>.gold</strong> file extension, so your directory would look something like this:   </p>
-<p><em>/.bat</em><br><em>/Blank-Project</em><br><em>/info</em><br><em>/modules</em><br><em>/myProjectSettings</em><br><em>/node_modules</em><br><em>package-lock.json</em><br><em>package.json</em><br><em>program.gold</em><br><em>README.md</em><br><em>run.bat</em><br><em>shell.bat</em>  </p>
+<p><em>/.bat</em><br><em>/interpreters</em><br><em>/Blank-Project</em><br><em>/info</em><br><em>/modules</em><br><em>/myProjectSettings</em><br><em>/node_modules</em><br><em>package-lock.json</em><br><em>package.json</em><br><em>program.gold</em><br><em>README.md</em><br><em>shell.bat</em>  </p>
 <p>The <strong>.gold</strong> file is your program.   </p>
-<p>Your <strong>Gold</strong> Program is interpreted using the interpreter you have, or the default one if you don&#39;t have a one.</p>
-<p>An Basic <strong>Gold</strong> Program would look something like this:</p>
-<pre><code class="lang-javascript">var myGoldProgram = {
-<span class="hljs-symbol">    name:</span> <span class="hljs-string">"Example Gold Program"</span>,
-<span class="hljs-symbol">    des:</span> <span class="hljs-string">"An Example Gold Program for the README file."</span>,
-<span class="hljs-symbol">    ex:</span> [
+<p>Your <strong>Gold</strong> Program is interpreted using the interpreter you have, or the default one if you don&#39;t have a one.   </p>
+<p>An Basic <strong>Gold</strong> Program would look something like this:   </p>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// Built for Reg Interpreter.</span>
+
+<span class="hljs-keyword">var</span> myGoldProgram = {
+    name: <span class="hljs-string">"Example Gold Program"</span>,
+    des: <span class="hljs-string">"An Example Gold Program for the README file."</span>,
+    int: <span class="hljs-string">"regInt"</span>,
+    ex: [
         {
-<span class="hljs-symbol">            fun:</span> <span class="hljs-string">"log"</span>,
-<span class="hljs-symbol">            val1:</span> <span class="hljs-string">"Hello World!"</span>
+            <span class="hljs-function"><span class="hljs-keyword">fun</span>: "log",</span>
+            val1: <span class="hljs-string">"Hello World!"</span>
+        },
+        {
+            <span class="hljs-function"><span class="hljs-keyword">fun</span>: "end"</span>
         }
     ]
 };
 
-<span class="hljs-class">export </span>{ myGoldProgram };
+export { myGoldProgram };
 </code></pre>
 <h1 id="advanced-programming">Advanced Programming</h1>
 <p>Think you got the hang of the <strong>Gold</strong> language? There are still many different things that you can do with the <strong>Gold</strong> language. Check out some tutorials inside of the wiki, or follow the basic Coding guide Below:</p>
 <pre><code class="lang-javascript">
-fun // add, sub, mul, div, <span class="hljs-keyword">if</span>, <span class="hljs-built_in">log</span>, <span class="hljs-built_in">var</span>, logVar
-saveToVar // <span class="hljs-literal">true</span>/<span class="hljs-literal">false</span>
-val1 // Your First Value, used <span class="hljs-keyword">for</span> logging things <span class="hljs-keyword">and</span> math equations.
-val2 // Second Value <span class="hljs-keyword">for</span> math equations.
-slot // Variable slot <span class="hljs-keyword">for</span> <span class="hljs-built_in">saving</span>. Possibilites are <span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-keyword">or</span> <span class="hljs-number">2</span>.
-type // =, &gt;, &lt;, ! 
-logvaluetrue // What to <span class="hljs-built_in">log</span> <span class="hljs-keyword">if</span> your <span class="hljs-keyword">if</span> statement <span class="hljs-built_in">is</span> <span class="hljs-literal">true</span>
-logvaluefalse // What to <span class="hljs-built_in">log</span> <span class="hljs-keyword">if</span> your <span class="hljs-keyword">if</span> statement <span class="hljs-built_in">is</span> <span class="hljs-literal">false</span>
+<span class="hljs-comment">// Functions for the Regular Interpreter, not the English one. </span>
+
+<span class="hljs-function"><span class="hljs-keyword">fun</span> // add, sub, mul, div, <span class="hljs-keyword">if</span>, log, <span class="hljs-keyword">var</span>, logVar</span>
+saveToVar <span class="hljs-comment">// true/false</span>
+val1 <span class="hljs-comment">// Your First Value, used for logging things and math equations.</span>
+val2 <span class="hljs-comment">// Second Value for math equations.</span>
+slot <span class="hljs-comment">// Variable slot for saving. Possibilites are 0, 1, or 2.</span>
+type <span class="hljs-comment">// =, &gt;, &lt;, ! </span>
+logvaluetrue <span class="hljs-comment">// What to log if your if statement is true</span>
+logvaluefalse <span class="hljs-comment">// What to log if your if statement is false</span>
+endProgram <span class="hljs-comment">// ALWAYS END YOUR PROGRAM WITH THIS!!!!</span>
 </code></pre>
 <h1 id="contribution">Contribution</h1>
 <p>Wanting to Contribute to <strong>Gold</strong>? Check out the <em>contributing.md</em> inside of the <em>/info</em> folder to learn how you can contribute to the <strong>Gold</strong> language.</p>
@@ -66,3 +77,6 @@ logvaluefalse // What to <span class="hljs-built_in">log</span> <span class="hlj
 <li><a href="https://github.com/Shining-Gold-Studios/Gold-Language">Gold</a>   </li>
 </ul>
 <p>Have any more questions? Join our Discord - <a href="https://discord.gg/CUJrdW5vKn">Discord</a></p>
+<ul>
+<li>/Colack</li>
+</ul>
