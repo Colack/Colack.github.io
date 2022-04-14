@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/Gold-Any-Program.ico">
+    <title>Error!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto Mono', monospace;
+            color: rgb(255, 255, 255);
+            background: #202731;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .yellow {
+            background: orangered;
+        }
+
+        .red {
+            background: #dd3f31;
+        }
+
+        .pink {
+            background: #ff0066;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+        }
+
+        .curve::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: orangered;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+        
+        img {
+            border-radius: 50%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .left_navbar {
+            height: calc(100vh - 40px);
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow: hidden;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+  
+  <section class="yellow">
+      <h1><strong>Error 404</strong></h1>
+      <img src="../../images/404.png" alt="Error" class="center" />
+      <div class="curve"></div>
+      <h2>That File does not exist.</h2>
+  </section>
+  
+</body>
+</html>
