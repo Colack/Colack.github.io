@@ -1,3 +1,4 @@
-# Website Repo
+# Colack.github.io
 
-This is just a Repository for my website
+A repository for my website.    
+You can check out the website [here](https://colack.github.io/)
