@@ -1,177 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="Gold-Any-Program.ico">
-    <title>Welcome!</title>
-    <style type="text/css">
-        body {
-            min-width: 630px;
-        }
+    <title>Landing</title>
 
-        #container {
-            padding-left: 200px;
-            padding-right: 190px;
-        }
-        
-        #container .column {
-            position: relative;
-            float: left;
-        }
-        
-        #center {
-            padding: 10px 20px;
-            width: 100%;
-        }
-        
-        #left {
-            width: 180px;
-            padding: 0 10px;
-            right: 240px;
-            margin-left: -100%;
-        }
-        
-        #right {
-            width: 130px;
-            padding: 0 10px;
-            margin-right: -100%;
-        }
-        
-        #footer {
-            clear: both;
-        }
-        
-        /* IE hack */
-        * html #left {
-            left: 150px;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
 
-        /* Make the columns the same height as each other */
-        #container {
-            overflow: hidden;
-        }
-
-        #container .column {
-            padding-bottom: 1001em;
-            margin-bottom: -1000em;
-        }
-
-        /* Fix for the footer */
-        * html body {
-            overflow: hidden;
-        }
-        
-        * html #footer-wrapper {
-            float: left;
-            position: relative;
-            width: 100%;
-            padding-bottom: 10010px;
-            margin-bottom: -10000px;
-            background: #fff;
-        }
-
-        /* Aesthetics */
+    <style>
         body {
             margin: 0;
-            padding: 0;
-            font-family:Sans-serif;
-            line-height: 1.5em;
-        }
-        
-        p {
-            color: #555;
+            font-family: 'Roboto Mono', monospace;
+            color: rgb(255, 255, 255);
+            background: #202731;
         }
 
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        nav ul a {
-            color: rgb(78, 78, 78);
-            text-decoration: none;
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
         }
 
-        #header, #footer {
-            font-size: large;
-            padding: 0.3em;
-            background: #c7c7c7;
+        .yellow {
+            background: orangered;
         }
 
-        #left {
-            background: #ffee56;
-        }
-        
-        #right {
-            background: #F7FDEB;
+        .red {
+            background: #dd3f31;
         }
 
-        #center {
-            background: #fff;
+        .pink {
+            background: #ff0066;
         }
 
-        #container .column {
-            padding-top: 1em;
+        .dark {
+            background: #0f0f10;
         }
-        
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .curve::before {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+        }
+
+        .curve::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: orangered;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        a {
+            color: yellow;
+        }
     </style>
-    
-    <script type="text/javascript">
-        var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-        function generateText(sentenceCount){
-            for (var i=0; i<sentenceCount; i++)
-            document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-        }
-    </script>   
 </head>
-
 <body>
-
-    <header id="header"><p>Header...</p></header>
-
-    <div id="container">
-
-        <main id="center" class="column">
-            <article>
-            
-                <h1>Heading</h1>
-                <p><script>generateText(50)</script></p>
-            
-            </article>                              
-        </main>
-
-        <nav id="left" class="column">
-            <h3>-- Socials --</h3>
-            <ul>
-                <li><a href="https://youtube.com/Colack">Youtube</a></li>
-                <li><a href="https://linktr.ee/Colack">Linktr.ee</a></li>
-                <li><a href="https://www.instagram.com/_colack/">Instagram</a></li>
-                <li><a href="https://dev.to/colack">Dev.to</a></li>
-                <li><a href="https://www.discord.gg/4sGB3HDj87">Discord</a></li>
-            </ul>
-            <h3>-- Projects --</h3>
-            <ul>
-                <li><a href="https://github.com/Shining-Gold-Studios/Gold-Language">Gold</a></li>
-                <li><a href="https://github.com/Shining-Gold-Studios/Gold-Save">Gold-Save</a></li>
-                <li><a href="https://github.com/Shining-Gold-Studios/megaShell">megaShell</a></li>
-                <li><a href="https://github.com/Colack/Orbital">Orbital</a></li>
-                <li><a href="https://github.com/Colack/Colack.github.io">This Website</a></li>
-            </ul>
-
-        </nav>
-
-        <div id="right" class="column">
-            <h3>Right heading</h3>
-            <p><script>generateText(1)</script></p>
-        </div>
-
-    </div>
-
-    <div id="footer-wrapper">
-        <footer id="footer"><p>Footer...</p></footer>
-    </div>
-
+  
+  <section class="yellow">
+      <h1>Landing</h1>
+      <p>Welcome to <strong>Colack.github.io</strong>, a website for my programming. There are many cool things included in this website. You can check them out down below!</p>
+      <div class="curve"></div>
+  </section>
+  <section>
+      <h1>Who Am I?</h1>
+      <p>Hi There, I'm Colack. I'm a software engineer, and a computer programmer. I mostly code in JavaScript and Python, but I'm learning <strong>C</strong> at the moment.</p>
+      <img src="https://avatars.githubusercontent.com/u/76410718?v=4" alt="Profile Picture" class="center" style="width:350px;height:350px;"/>
+  </section>
+  <section>
+      <h1>Résumé</h1>
+      <a href="https://linktr.ee/Colack">Link Tree</a>
+      <p><strong>Programming</strong></p>
+      <a href="https://github.com/Shining-Gold-Studios/Gold-Language">Gold</a>
+      <a href="https://github.com/Shining-Gold-Studios/Gold-Save">Gold-Save</a>
+      <a href="https://github.com/Shining-Gold-Studios/megaShell">megaShell</a>
+      <a href="https://github.com/Colack/Orbital">Orbital</a>
+      <p><strong>Music</strong></p>
+      <a href="https://drive.google.com/drive/u/1/folders/1ivqrCVf8rts1D9Ny0zr3LlEJpaGky6yM">Music Drive</a>
+      <a href="http://youtube.com/Colack">Youtube Channel</a>
+      <p><strong>Art</strong></p>
+      <a href="https://www.pixilart.com/colackgolden">Pixilart</a>
+      <p><strong>Contact</strong></p>
+      <a href="UniformKitten281@gmail.com">Personal Email</a>
+      <a href="ColackAlpha@gmail.com">Work Email</a>
+      <a href="https://www.discord.gg/4sGB3HDj87">Discord Server</a>
+      <p><strong>Socials</strong></p>
+      <a href="https://www.instagram.com/_colack/">Instagram</a>
+      <a href="https://dev.to/colack">Dev.to</a>
+      <a href="https://www.youtube.com/Colack">Youtube</a>
+  </section>
+  <section>
+      <h1>Nice</h1>
+      <p>In voluptates quibusdam fuga minima soluta delectus sit, ratione quos sapiente labore rerum cumque, excepturi quis, ullam optio sequi! Assumenda voluptatem optio molestias nihil delectus laborum ut quaerat quis quam!</p>
+  </section>
+  <section>
+      <h1>Nice</h1>
+      <p>Similique, optio dolores eveniet ex laboriosam aliquid quisquam dolorum ducimus ratione excepturi. Dolores, distinctio, in, aliquid tenetur ad deleniti omnis repellat quas magni rem ratione. Illo eos officiis impedit tempora.</p>
+  </section>
+  <section>
+      <h1>Nice</h1>
+      <p>Sit voluptatum veniam suscipit itaque voluptas aspernatur assumenda, accusamus, commodi, temporibus corrupti quod est iure voluptatem nostrum? Laudantium expedita in quos assumenda similique quibusdam? Aut asperiores molestias facilis dolore delectus?</p>
+  </section>
+  <section>
+      <h1>Nice</h1>
+      <p>Inventore molestiae sapiente repudiandae autem sit, laborum, fugiat atque nam vel aut voluptatum dignissimos fugit nulla rem quod voluptatem necessitatibus quam laudantium odio similique. Rem sunt quis deserunt repellat fugit!</p>
+  </section>
+  <section>
+      <h1>Nice</h1>
+      <p>Maxime iusto quis at velit voluptatibus neque natus ut vel quibusdam, ullam cum enim debitis provident! Minus, non reiciendis corporis cumque assumenda dolorem quas aliquam perferendis voluptatibus? Perferendis, adipisci eveniet.</p>
+  </section>
+  
 </body>
-
 </html>
