@@ -10,8 +10,6 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
-const getVal = document.querySelector('quiz-input');
-
 let questions = [
     {
         question: 'What is God/Goddess in Spanish?',
