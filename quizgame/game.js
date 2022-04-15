@@ -1,4 +1,5 @@
 const question = document.querySelector('#question');
+const code = document.querySelector('#USERNAMECODE')
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
@@ -12,10 +13,24 @@ let availableQuestions = []
 
 const getVal = document.querySelector('quiz-input');
 
-let questions = [
-   // Setting up question system later
+var questions;
+
+var questions1 = [
+    {
+        question: 'ERROR: INCORRECT CODE; RELOAD TAB',
+        choice1: '2',
+        choice2: '4',
+        choice3: '21',
+        choice4: '17',
+        answer: 2,
+    }
 ]
 
+if (code == 1) {
+     
+      
+   
+}
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
