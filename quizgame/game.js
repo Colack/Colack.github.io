@@ -10,6 +10,9 @@ let score = 0
 let questionCounter = 0
 let availableQuestions = []
 
+const SCORE_POINTS = 100
+var MAX_QUESTIONS = 12
+
 let questions = [
     {
         question: 'What is God/Goddess in Spanish?',
@@ -108,9 +111,6 @@ let questions = [
         answer: 4,
     }
 ]
-
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 12
 
 startGame = () => {
     questionCounter = 0
