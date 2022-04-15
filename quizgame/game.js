@@ -1,5 +1,4 @@
 const question = document.querySelector('#question');
-const code = document.querySelector('#USERNAMECODE')
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
@@ -13,24 +12,105 @@ let availableQuestions = []
 
 const getVal = document.querySelector('quiz-input');
 
-var questions;
-
-var questions1 = [
+let questions = [
     {
-        question: 'ERROR: INCORRECT CODE; RELOAD TAB',
-        choice1: '2',
-        choice2: '4',
-        choice3: '21',
-        choice4: '17',
+        question: 'What is God/Goddess in Spanish?',
+        choice1: 'el dios(a)',
+        choice2: 'el enemigo(a)',
+        choice3: 'casarse',
+        choice4: 'el presonaje',
+        answer: 1,
+    },
+    {
+        question: 'What is Army in Spanish?',
+        choice1: 'llevar',
+        choice2: 'la guerra',
+        choice3: 'el ejercito',
+        choice4: 'la batalla',
+        answer: 3,
+    },
+    {
+        question: 'What is el emperador in English?',
+        choice1: 'battle',
+        choice2: 'war',
+        choice3: 'hero',
+        choice4: 'emperor',
+        answer: 4,
+    },
+    {
+        question: 'What is Enemy in Spanish?',
+        choice1: 'el guerrero',
+        choice2: 'el heroe',
+        choice3: 'el enemigo',
+        choice4: 'la heroina',
+        answer: 3,
+    },
+    {
+        question: 'What is el guerrero in English?',
+        choice1: 'to get married',
+        choice2: 'narration',
+        choice3: 'warrior',
+        choice4: 'character',
+        answer: 3,
+    },
+    {
+        question: 'What is el heroe in English?',
+        choice1: 'hero',
+        choice2: 'heroine',
+        choice3: 'young man/woman',
+        choice4: 'princess',
+        answer: 1,
+    },
+    {
+        question: 'What is Heroine in Spanish?',
+        choice1: 'el joven',
+        choice2: 'la heroina',
+        choice3: 'el ejercito',
+        choice4: 'casarse',
         answer: 2,
+    },
+    {
+        question: 'What is el joven in English?',
+        choice1: 'battle',
+        choice2: 'volcano',
+        choice3: 'young man/woman',
+        choice4: 'palace',
+        answer: 3,
+    },
+    {
+        question: 'What is Princess in Spanish?',
+        choice1: 'llorar',
+        choice2: 'la princesa',
+        choice3: 'morir',
+        choice4: 'transformar',
+        answer: 2,
+    },
+    {
+        question: 'What is Battle in Spanish?',
+        choice1: 'la batalla',
+        choice2: 'pelear',
+        choice3: 'llorar',
+        choice4: 'ue',
+        answer: 1,
+    },
+    {
+        question: 'What is La Guerra in English?',
+        choice1: 'llorar',
+        choice2: 'la guerra',
+        choice3: 'la montana',
+        choice4: 'casarse',
+        answer: 2,
+    },
+    {
+        question: 'What is Character in Spanish?',
+        choice1: 'los celos',
+        choice2: 'azteca',
+        choice3: 'hermoso',
+        choice4: 'el personaje',
+        answer: 4,
     }
 ]
 
-if (code == 1) {
-     
-      
-   
-}
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
@@ -51,7 +131,7 @@ getNewQuestion = () => {
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
-    
+
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
