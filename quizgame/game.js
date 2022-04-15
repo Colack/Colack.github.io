@@ -173,4 +173,5 @@ incrementScore = num => {
     scoreText.innerText = score
 }
 
+progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
 startGame()
