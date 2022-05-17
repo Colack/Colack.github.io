@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Owner: <input type="text" id="myText" value="">
+Repository: <input type="text" id="text2" value="">
+
+<p>Change The Values to get My Github Contributions!</p>
+
+<p id="content">No Link To Show....</p>
+
+<button onclick="myFunction()">Get Link</button>
+
+<script>
+function myFunction() {
+	var x;
+    var y;
+    var z;
+    var finalLink;
+ 	x = document.getElementById("myText").value
+    y = document.getElementById("text2").value
+    
+    const header = document.getElementById("content");
+    
+    finalLink = "https://github.com/" + x + "/" + y + "/commits?author=Colack";
+    
+    header.textContent = "Your Link is: " + finalLink;
+}
+
+</script>
+
+</body>
+</html>
